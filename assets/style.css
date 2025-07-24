@@ -28,59 +28,6 @@ body {
   color: var(--text-dark);
 }
 
-header {
-  text-align: center;
-  padding: 1rem 0 0 0;
-}
-
-header .logo {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-header .logo img {
-  max-width: 280px;
-  height: auto;
-}
-
-header nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  padding: 1rem 0;
-  background-color: #f8f8f8;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-header nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-}
-
-header nav a:hover,
-header nav a.active {
-  color: var(--accent-blue);
-  background-color: rgba(52, 120, 246, 0.1);
-}
-
-header {
-  text-align: center;
-  padding: 2rem 1rem 1rem;
-}
-
-header img {
-  max-width: 280px;
-  height: auto;
-  margin-bottom: 1rem;
-}
-
-/* Improved Layout and Spacing */
-
 /* Enhanced Navbar */
 .navbar {
   background-color: #f8f8f8;
@@ -462,18 +409,18 @@ header img {
   color: var(--accent-green);
 }
 
-/* Dark mode for service detail pages */
-.dark-mode header nav {
+/* Dark mode for navbar */
+.dark-mode .navbar {
   background-color: #2c2c2e;
   border-bottom-color: #444;
 }
 
-.dark-mode header nav a {
+.dark-mode .nav-links a {
   color: var(--text-dark);
 }
 
-.dark-mode header nav a:hover,
-.dark-mode header nav a.active {
+.dark-mode .nav-links a:hover,
+.dark-mode .nav-links a.active {
   color: var(--accent-green);
   background-color: rgba(40, 201, 139, 0.1);
 }
