@@ -5,7 +5,7 @@
   --text-light: #1c1c1e;
   --text-dark: #f2f2f7;
   --accent-blue: #3478f6;
-  --accent-green: #57b922;
+  --accent-green: #379b10;
   --button-hover: #e6e6e6;
 }
 
@@ -166,12 +166,12 @@ body {
 }
 
 .service-button-group .button.primary {
-  background-color: #57b922;
+  background-color: #379b10;
   color: white;
 }
 
 .service-button-group .button.primary:hover {
-  background-color: #57b922;
+  background-color: #379b10;
   transform: translateY(-1px);
 }
 
