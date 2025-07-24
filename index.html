@@ -1,22 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Trivance AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --background: #ffffff;
+      --foreground: #1a1a1a;
+      --accent: #0077cc;
+      --accent-dark: #005fa3;
+      --section-bg: #f4f4f4;
+      --button-bg: #0077cc;
+      --button-text: #ffffff;
+      --button-secondary-bg: #444;
+      --button-secondary-text: #fff;
+    }
+
+    [data-theme="dark"] {
+      --background: #121212;
+      --foreground: #e0e0e0;
+      --accent: #4fc3f7;
+      --accent-dark: #0288d1;
+      --section-bg: #1e1e1e;
+      --button-bg: #4fc3f7;
+      --button-text: #000;
+      --button-secondary-bg: #888;
+      --button-secondary-text: #fff;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #ffffff;
-      color: #1a1a1a;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
       line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     header {
-      background-color: #f8f9fa;
       text-align: center;
       padding: 3rem 1rem;
+      background-color: var(--section-bg);
     }
 
     header img {
@@ -25,25 +52,35 @@
     }
 
     header h1 {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       margin: 0;
     }
 
     header p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       margin-top: 0.5rem;
-      color: #006400;
+      color: green;
     }
 
     .button {
       display: inline-block;
-      margin-top: 1.5rem;
-      background-color: #0077cc;
-      color: #ffffff;
+      margin: 1rem 0.5rem;
+      background-color: var(--button-bg);
+      color: var(--button-text);
       padding: 0.75rem 1.25rem;
-      border-radius: 5px;
+      border-radius: 8px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+
+    .button:hover {
+      background-color: var(--accent-dark);
+    }
+
+    .button.secondary {
+      background-color: var(--button-secondary-bg);
+      color: var(--button-secondary-text);
     }
 
     section {
@@ -53,8 +90,8 @@
     }
 
     h2 {
-      color: #003366;
-      border-bottom: 2px solid #0077cc;
+      color: var(--accent-dark);
+      border-bottom: 2px solid var(--accent);
       padding-bottom: 0.25rem;
     }
 
@@ -66,15 +103,27 @@
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
-      background-color: #f0f0f0;
+      background-color: var(--section-bg);
       color: #666;
+    }
+
+    .toggle-container {
+      text-align: right;
+      padding: 1rem 2rem;
+    }
+
+    .toggle-container button {
+      background: none;
+      border: none;
+      font-size: 0.9rem;
+      color: var(--accent);
+      cursor: pointer;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
       }
-
       header img {
         max-width: 90px;
       }
@@ -83,25 +132,23 @@
 </head>
 <body>
 
+  <div class="toggle-container">
+    <button onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
+  </div>
+
   <header>
     <img src="assets/Trivance_AI_Logo_Small.png" alt="Trivance AI Logo"/>
     <h1>Trivance AI</h1>
     <p>Better Prompts. Smarter Workflows. More Time.</p>
-    <a href="https://calendly.com/kyle-fonger-trivanceai/30min" class="button" target="_blank">Book Your Free AI Strategy Call</a><br><br>
-    <a href="mailto:kyle.fonger@trivanceai.com" class="button" style="background-color:#444;">Or Email Me Directly</a>
+    <a href="https://calendly.com/kyle-fonger-trivanceai/30min" class="button" target="_blank">Book Your Free AI Strategy Call</a>
+    <a href="mailto:kyle.fonger@trivanceai.com" class="button secondary">Or Email Me Directly</a>
   </header>
 
   <section>
     <h2>What We Do</h2>
-    <p>
-      Trivance AI helps leadership teams and small businesses identify operational friction, unlock institutional knowledge, and leverage modern AI tools to run smarter.
-    </p>
-    <p>
-      We combine language-model expertise with systems thinking to surface real opportunities — not just bolt-on tools.
-    </p>
-    <p>
-      Whether it's unblocking your team’s access to internal knowledge or translating meetings into action — we guide you through the noise.
-    </p>
+    <p>Trivance AI helps leadership teams and small businesses identify operational friction, unlock institutional knowledge, and leverage modern AI tools to run smarter.</p>
+    <p>We combine language-model expertise with systems thinking to surface real opportunities — not just bolt-on tools.</p>
+    <p>Whether it's unblocking your team’s access to internal knowledge or translating meetings into action — we guide you through the noise.</p>
   </section>
 
   <section>
@@ -117,18 +164,23 @@
 
   <section>
     <h2>Who It's For</h2>
-    <p>
-      Trivance is built for small orgs and mid-size teams who know they *should* be using AI — but don’t want to duct-tape a thousand dashboards together.
-    </p>
-    <p>
-      We meet with your team, learn what you do, spot the friction, and propose a focused AI implementation roadmap. If needed, we stay on to support, train, or advise.
-    </p>
+    <p>Trivance is built for small orgs and mid-size teams who know they <em>should</em> be using AI — but don’t want to duct-tape a thousand dashboards together.</p>
+    <p>We meet with your team, learn what you do, spot the friction, and propose a focused AI implementation roadmap. If needed, we stay on to support, train, or advise.</p>
   </section>
 
   <footer>
     &copy; 2025 Trivance AI · Founded by Kyle Fonger · <a href="mailto:kyle.fonger@trivanceai.com">Contact</a>
   </footer>
 
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      if (current === "dark") {
+        document.documentElement.removeAttribute("data-theme");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    }
+  </script>
 </body>
 </html>
-
