@@ -431,7 +431,7 @@ body {
 /* Pricing Page Styles */
 .pricing-section {
   max-width: 1200px;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 2rem auto;
   padding: 2rem;
 }
 
@@ -490,7 +490,7 @@ body {
 .build-cards {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 
 .build-card {
@@ -551,7 +551,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .tier-card {
@@ -625,8 +625,8 @@ body {
   background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
   color: white;
   text-align: center;
-  padding: 4rem 2rem;
-  margin-top: 4rem;
+  padding: 3rem 2rem;
+  margin-top: 2rem;
 }
 
 .footer-cta h2 {
@@ -686,7 +686,7 @@ body {
   }
   
   .footer-cta {
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
   }
 }
 
