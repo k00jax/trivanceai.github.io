@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (logoImage) {
       logoImage.src = isDark
         ? `${assetPath}Trivance_AI_Logo_Full_invert_no_back.png`
-        : `${assetPath}Trivance_AI_Logo_Full_no_background.png`;
+        : `${assetPath}Trivance_AI_Logo_Full.png`;
     }
   }
 
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (logoImage) {
       logoImage.src = isDark
         ? `${assetPath}Trivance_AI_Logo_Full_invert_no_back.png`
-        : `${assetPath}Trivance_AI_Logo_Full_no_background.png`;
+        : `${assetPath}Trivance_AI_Logo_Full.png`;
     }
   });
 
