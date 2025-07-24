@@ -134,6 +134,54 @@ body {
   margin-top: 2rem;
 }
 
+/* New unified button group for service pages */
+.service-button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.service-button-group .button {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.service-button-group .button.back {
+  background-color: #2563eb;
+  color: white;
+}
+
+.service-button-group .button.back:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.service-button-group .button.primary {
+  background-color: #10b981;
+  color: white;
+}
+
+.service-button-group .button.primary:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+}
+
+.service-button-group .button.secondary {
+  background-color: #374151;
+  color: white;
+}
+
+.service-button-group .button.secondary:hover {
+  background-color: #1f2937;
+  transform: translateY(-1px);
+}
+
 /* Back Button */
 .back-button {
   text-align: center;
