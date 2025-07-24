@@ -1,191 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trivance AI</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --background: #ffffff;
-      --foreground: #1a1a1a;
-      --accent: #0077cc;
-      --accent-dark: #005fa3;
-      --section-bg: #f4f4f4;
-      --button-bg: #0077cc;
-      --button-text: #ffffff;
-      --button-secondary-bg: #444;
-      --button-secondary-text: #fff;
-    }
-
-    [data-theme="dark"] {
-      --background: #121212;
-      --foreground: #e0e0e0;
-      --accent: #4fc3f7;
-      --accent-dark: #0288d1;
-      --section-bg: #1e1e1e;
-      --button-bg: #4fc3f7;
-      --button-text: #000;
-      --button-secondary-bg: #888;
-      --button-secondary-text: #fff;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: var(--background);
-      color: var(--foreground);
-      line-height: 1.6;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    header {
-      text-align: center;
-      padding: 3rem 1rem;
-      background-color: var(--section-bg);
-    }
-
-    header img {
-      max-width: 120px;
-      margin-bottom: 1rem;
-    }
-
-    header h1 {
-      font-size: 2.4rem;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      color: green;
-    }
-
-    .button {
-      display: inline-block;
-      margin: 1rem 0.5rem;
-      background-color: var(--button-bg);
-      color: var(--button-text);
-      padding: 0.75rem 1.25rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.2s;
-    }
-
-    .button:hover {
-      background-color: var(--accent-dark);
-    }
-
-    .button.secondary {
-      background-color: var(--button-secondary-bg);
-      color: var(--button-secondary-text);
-    }
-
-    section {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-
-    h2 {
-      color: var(--accent-dark);
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.25rem;
-    }
-
-    ul {
-      padding-left: 1.25rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      background-color: var(--section-bg);
-      color: #666;
-    }
-
-    .toggle-container {
-      text-align: right;
-      padding: 1rem 2rem;
-    }
-
-    .toggle-container button {
-      background: none;
-      border: none;
-      font-size: 0.9rem;
-      color: var(--accent);
-      cursor: pointer;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-      header img {
-        max-width: 90px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/Trivance_AI_Logo_Full_no_background.png" alt="Trivance AI Logo" />
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <button id="theme-toggle">🌓</button>
+    </nav>
+  </header>
 
-  <div class="toggle-container">
-    <button onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
-  </div>
-
-<header style="text-align: center; padding: 2rem 1rem;">
-  <img src="assets/Trivance_AI_Logo_Full_no_background.png" alt="Trivance AI Logo" style="max-width: 280px; height: auto; margin-bottom: 1.5rem;" />
-
-  <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-    <a href="https://calendly.com/kyle-fonger-trivanceai/30min" class="button" target="_blank">
-      Book Your Free AI Strategy Call
-    </a>
-    <a href="mailto:kyle.fonger@trivanceai.com" class="button secondary">
-      Or Email Me Directly
-    </a>
-  </div>
-</header>
-
-  <section>
-    <h2>What We Do</h2>
-    <p>Trivance AI helps leadership teams and small businesses identify operational friction, unlock institutional knowledge, and leverage modern AI tools to run smarter.</p>
-    <p>We combine language-model expertise with systems thinking to surface real opportunities — not just bolt-on tools.</p>
-    <p>Whether it's unblocking your team’s access to internal knowledge or translating meetings into action — we guide you through the noise.</p>
+  <section class="hero">
+    <h1>Better Prompts. Smarter Workflows. More Time.</h1>
+    <p>Trivance AI helps small and mid-sized teams unlock AI’s real potential — without the duct tape.</p>
+    <div class="cta-buttons">
+      <a href="https://calendly.com/kyle-fonger-trivanceai/30min" target="_blank" class="btn primary">Book Your Free AI Strategy Call</a>
+      <a href="mailto:kyle.fonger@trivanceai.com" class="btn secondary">Or Email Me Directly</a>
+    </div>
   </section>
 
-  <section>
-    <h2>Services</h2>
-    <ul>
-      <li>🧭 AI Strategy Audits & Friction Mapping</li>
-      <li>📄 Document Understanding & Employee GPTs</li>
-      <li>✉️ Meeting Follow-Up Triage & Actionable Summaries</li>
-      <li>🎓 LLM Training for Leadership Teams</li>
-      <li>📅 Ongoing AI Consulting & Industry Trend Reporting (Retainer)</li>
-    </ul>
+  <section class="services-preview">
+    <h2>Our Core Services</h2>
+    <div class="service-grid">
+      <a href="services/ai-strategy.html" class="service-card">
+        <img src="assets/icon-strategy.png" alt="Strategy Icon">
+        <h3>AI Strategy Audits</h3>
+        <p>Surface hidden friction and map AI opportunities across your workflows.</p>
+      </a>
+      <a href="services/document-gpts.html" class="service-card">
+        <img src="assets/icon-docs.png" alt="Docs Icon">
+        <h3>Document GPTs</h3>
+        <p>Understand, tag, and route institutional knowledge with custom GPTs.</p>
+      </a>
+      <a href="services/meeting-summary.html" class="service-card">
+        <img src="assets/icon-summary.png" alt="Summary Icon">
+        <h3>Meeting Summaries</h3>
+        <p>Convert meeting notes into clean triaged actions and summaries in seconds.</p>
+      </a>
+      <a href="services/llm-training.html" class="service-card">
+        <img src="assets/icon-training.png" alt="Training Icon">
+        <h3>LLM Training</h3>
+        <p>Train your leadership and ops teams to think and build like prompt engineers.</p>
+      </a>
+      <a href="services/retainer.html" class="service-card">
+        <img src="assets/icon-insight.png" alt="Insight Icon">
+        <h3>Ongoing Partnership</h3>
+        <p>Access AI guidance, trend analysis, and consulting without the overhead.</p>
+      </a>
+    </div>
   </section>
 
-  <section>
-    <h2>Who It's For</h2>
-    <p>Trivance is built for small orgs and mid-size teams who know they <em>should</em> be using AI — but don’t want to duct-tape a thousand dashboards together.</p>
-    <p>We meet with your team, learn what you do, spot the friction, and propose a focused AI implementation roadmap. If needed, we stay on to support, train, or advise.</p>
-  </section>
-
-  <footer>
-    &copy; 2025 Trivance AI · Founded by Kyle Fonger · <a href="mailto:kyle.fonger@trivanceai.com">Contact</a>
+  <footer class="footer">
+    <p>&copy; 2025 Trivance AI &bullet; Founded by Kyle Fonger &bullet; <a href="contact.html">Contact</a></p>
   </footer>
 
   <script>
-    function toggleTheme() {
-      const current = document.documentElement.getAttribute("data-theme");
-      if (current === "dark") {
-        document.documentElement.removeAttribute("data-theme");
-      } else {
-        document.documentElement.setAttribute("data-theme", "dark");
-      }
-    }
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
   </script>
 </body>
 </html>
