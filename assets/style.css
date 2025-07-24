@@ -11,9 +11,10 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-light);
+  font-family: "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
