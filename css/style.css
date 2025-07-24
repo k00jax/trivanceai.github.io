@@ -1,1 +1,170 @@
+/* Base Styles */
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #1c1c1e;
+  --text-light: #1c1c1e;
+  --text-dark: #f2f2f7;
+  --accent-blue: #3478f6;
+  --accent-green: #28c98b;
+  --button-hover: #e6e6e6;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+header img {
+  max-width: 280px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  background-color: #f8f8f8;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.navbar a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: var(--accent-blue);
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+h1, h2, h3 {
+  color: var(--accent-blue);
+}
+
+p {
+  line-height: 1.6;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+button, .button {
+  background-color: var(--accent-blue);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+button:hover, .button:hover {
+  background-color: var(--accent-green);
+}
+
+.button.secondary {
+  background-color: #666;
+}
+
+.button.secondary:hover {
+  background-color: #999;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: #f4f4f4;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+}
+
+.service-card h3 {
+  margin-top: 0;
+  color: var(--accent-blue);
+}
+
+.service-card img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+/* Founder Section */
+.founder-photo {
+  max-width: 150px;
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Dark Mode Enhancements */
+.dark-mode .navbar {
+  background-color: #333;
+}
+
+.dark-mode .navbar a {
+  color: var(--text-dark);
+}
+
+.dark-mode .navbar a:hover {
+  color: var(--accent-green);
+}
+
+.dark-mode .service-card {
+  background-color: #2c2c2e;
+  color: var(--text-dark);
+}
+
+.dark-mode .button,
+.dark-mode .button.secondary {
+  background-color: var(--accent-green);
+}
+
+.dark-mode .button:hover,
+.dark-mode .button.secondary:hover {
+  background-color: var(--accent-blue);
+}
 
