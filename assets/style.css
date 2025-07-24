@@ -61,12 +61,13 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: var(--text-dark); /* light text for both themes */
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: all 0.2s ease;
 }
+
 
 .nav-links a:hover {
   color: var(--accent-blue);
