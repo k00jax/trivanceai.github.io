@@ -11,7 +11,7 @@
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Roboto, sans-serif;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
   background-color: #f8f9fa;
   color: #333;
@@ -124,7 +124,7 @@ header img {
   background-color: rgba(52, 120, 246, 0.1);
 }
 
-#theme-toggle {
+#darkModeToggle {
   background: none;
   border: 1px solid #ddd;
   border-radius: 50%;
@@ -135,7 +135,7 @@ header img {
   transition: all 0.2s ease;
 }
 
-#theme-toggle:hover {
+#darkModeToggle:hover {
   background-color: var(--accent-blue);
   border-color: var(--accent-blue);
 }
@@ -359,12 +359,12 @@ header img {
   background-color: rgba(40, 201, 139, 0.1);
 }
 
-.dark-mode #theme-toggle {
+.dark-mode #darkModeToggle {
   border-color: #555;
   color: var(--text-dark);
 }
 
-.dark-mode #theme-toggle:hover {
+.dark-mode #darkModeToggle:hover {
   background-color: var(--accent-green);
   border-color: var(--accent-green);
 }
