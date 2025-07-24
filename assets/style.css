@@ -30,8 +30,8 @@ body {
 
 /* Enhanced Navbar */
 .navbar {
-  background: linear-gradient(135deg, #e3f0ff, #c5dfff); /* light mode gradient */
-  padding: 0.5rem 0 1rem 0;
+  background: linear-gradient(135deg, #0e1a2b, #1c2e4a);
+  padding: 0.25rem 0 0.75rem 0;
   text-align: center;
   border-bottom: 1px solid #e0e0e0;
   position: sticky;
@@ -40,17 +40,15 @@ body {
   transition: background 0.4s ease-in-out;
 }
 
-
 .logo {
-  margin-bottom: 0.5rem;
-  padding-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  padding-top: 0.25rem;
 }
 
-
 .logo img {
-  max-width: 336px;
+  max-width: 300px;
   height: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
 }
 
 .nav-links {
@@ -462,10 +460,6 @@ body {
 }
 
 /* Dark Mode Enhancements */
-.dark-mode .navbar {
-  background: linear-gradient(135deg, #0e1a2b, #1c2e4a);
-  border-bottom-color: #444;
-}
 
 
 .dark-mode .nav-links a {
