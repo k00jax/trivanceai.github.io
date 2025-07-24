@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.toggle('dark-mode', isDark);
     if (logoImage) {
       logoImage.src = isDark
-        ? `${assetPath}Trivance_AI_Logo_Full_invert_no_back.png`
+        ? `${assetPath}Trivance_AI_Logo_Full_dark_no_back.png`
         : `${assetPath}Trivance_AI_Logo_Full.png`;
     }
   }
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
     if (logoImage) {
       logoImage.src = isDark
-        ? `${assetPath}Trivance_AI_Logo_Full_invert_no_back.png`
+        ? `${assetPath}Trivance_AI_Logo_Full_dark_no_back.png`
         : `${assetPath}Trivance_AI_Logo_Full.png`;
     }
   });

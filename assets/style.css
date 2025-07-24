@@ -193,9 +193,31 @@ header img {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-bottom: 2rem;
+  justify-items: center;
+}
+
+/* When cards don't fill the last row, center them */
+.service-grid .service-card:nth-child(4) {
+  grid-column: 1 / 2;
+}
+
+.service-grid .service-card:nth-child(5) {
+  grid-column: 3 / 4;
+}
+
+/* On smaller screens, use auto-fit */
+@media (max-width: 1024px) {
+  .service-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .service-grid .service-card:nth-child(4),
+  .service-grid .service-card:nth-child(5) {
+    grid-column: auto;
+  }
 }
 
 .service-card {
@@ -456,12 +478,12 @@ header img {
   background-color: rgba(40, 201, 139, 0.1);
 }
 
-/* Dark mode for CTA buttons */
-.dark-mode .cta-button {
+/* Dark mode for buttons */
+.dark-mode .btn.primary {
   background-color: var(--accent-green);
 }
 
-.dark-mode .cta-button:hover {
+.dark-mode .btn.primary:hover {
   background-color: var(--accent-blue);
 }
 
@@ -517,7 +539,7 @@ header img {
     align-items: center;
   }
   
-  .cta-button {
+  .btn {
     width: 100%;
     max-width: 300px;
   }
