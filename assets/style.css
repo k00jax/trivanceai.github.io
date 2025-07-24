@@ -460,6 +460,268 @@ body {
   text-decoration: underline;
 }
 
+/* Pricing Page Styles */
+.pricing-section {
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
+  padding: 2rem;
+}
+
+.pricing-section h2 {
+  color: var(--accent-blue);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.callout-block {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border: 2px solid var(--accent-blue);
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.callout-block h2 {
+  margin-bottom: 1rem;
+  color: var(--accent-blue);
+}
+
+.callout-block .highlight {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent-green);
+  margin-bottom: 1rem;
+}
+
+.section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.text-content h3 {
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem;
+}
+
+.price-range {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-green);
+  margin-bottom: 1.5rem;
+}
+
+.image-placeholder {
+  text-align: center;
+}
+
+.build-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.build-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.build-card:nth-child(even) {
+  grid-template-columns: 1fr 1fr;
+}
+
+.build-card:nth-child(even) .card-content {
+  order: 2;
+}
+
+.build-card:nth-child(even) .card-image {
+  order: 1;
+}
+
+.card-content h3 {
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem;
+}
+
+.training-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.training-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.training-card h3 {
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem;
+}
+
+.session-info {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.partnership-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.tier-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid #f0f0f0;
+  position: relative;
+  text-align: center;
+}
+
+.tier-card.popular {
+  border: 2px solid var(--accent-green);
+  transform: scale(1.05);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-green);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.tier-card h3 {
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem;
+}
+
+.tier-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-green);
+  margin-bottom: 1.5rem;
+}
+
+.tier-card ul {
+  text-align: left;
+}
+
+.section-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newsletter-preview {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.newsletter-preview h3 {
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+}
+
+.footer-cta {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-top: 4rem;
+}
+
+.footer-cta h2 {
+  color: white;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Pricing Styles */
+@media (max-width: 1024px) {
+  .section-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .build-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .build-card:nth-child(even) .card-content {
+    order: 1;
+  }
+  
+  .build-card:nth-child(even) .card-image {
+    order: 2;
+  }
+  
+  .training-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .partnership-tiers {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .tier-card.popular {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 1rem;
+  }
+  
+  .callout-block {
+    padding: 2rem;
+  }
+  
+  .build-card,
+  .training-card,
+  .tier-card {
+    padding: 1.5rem;
+  }
+  
+  .footer-cta {
+    padding: 3rem 1rem;
+  }
+}
+
 /* Dark Mode Enhancements */
 
 
