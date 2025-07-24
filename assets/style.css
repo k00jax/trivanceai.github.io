@@ -31,7 +31,7 @@ body {
 /* Enhanced Navbar */
 .navbar {
   background: linear-gradient(135deg, #0e1a2b, #1c2e4a);
-  padding: 0.25rem 0 0.75rem 0;
+  padding: 0.25rem 0 0.5rem 0;
   text-align: center;
   border-bottom: 1px solid #e0e0e0;
   position: sticky;
@@ -48,14 +48,14 @@ body {
 .logo img {
   max-width: 300px;
   height: auto;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0rem;
 }
 
 .nav-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
@@ -63,7 +63,7 @@ body {
   text-decoration: none;
   color: var(--text-dark); /* light text for both themes */
   font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.75rem;
   border-radius: 4px;
   transition: all 0.2s ease;
 }
