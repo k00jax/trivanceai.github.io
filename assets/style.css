@@ -116,12 +116,44 @@ body {
   margin-right: auto;
 }
 
+.hero .subtext {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: #666;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .cta-buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 2rem;
+}
+
+/* Back Button */
+.back-button {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.back-button .button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #666;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.back-button .button:hover {
+  background-color: #999;
+  transform: translateY(-2px);
 }
 
 /* Services Preview Section */
@@ -270,6 +302,35 @@ body {
 }
 
 /* Enhanced Buttons */
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  background-color: var(--accent-blue);
+  color: white;
+}
+
+.button:hover {
+  background-color: var(--accent-green);
+  transform: translateY(-2px);
+}
+
+.button.secondary {
+  background-color: #666;
+  color: white;
+}
+
+.button.secondary:hover {
+  background-color: #999;
+  transform: translateY(-2px);
+}
+
 .btn {
   display: inline-block;
   padding: 1rem 2rem;
@@ -390,6 +451,26 @@ body {
 
 .dark-mode .hero p {
   color: #bbb;
+}
+
+.dark-mode .hero .subtext {
+  color: #bbb;
+}
+
+.dark-mode .button {
+  background-color: var(--accent-green);
+}
+
+.dark-mode .button:hover {
+  background-color: var(--accent-blue);
+}
+
+.dark-mode .button.secondary {
+  background-color: #555;
+}
+
+.dark-mode .button.secondary:hover {
+  background-color: #777;
 }
 
 .dark-mode .btn.primary {
