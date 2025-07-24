@@ -44,7 +44,7 @@ body {
 }
 
 .logo img {
-  max-width: 280px;
+  max-width: 336px;
   height: auto;
   margin-bottom: 1rem;
 }
@@ -652,7 +652,7 @@ body {
   }
   
   .logo img {
-    max-width: 220px;
+    max-width: 264px;
   }
 }
 
