@@ -784,33 +784,37 @@ body {
 
 /* FAQ Page Styles */
 .hero .faq-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 1rem;
   margin: 3rem 0;
   text-align: left;
 }
 
 .faq-item {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  border: 1px solid #f0f0f0;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #333;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1.5rem;
 }
 
 .faq-item h3 {
-  color: var(--accent-blue);
-  margin-bottom: 1rem;
   font-size: 1.25rem;
   font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #1a1a1a;
 }
 
 .faq-item p {
   margin-bottom: 1rem;
-  line-height: 1.6;
 }
 
 .faq-item p:last-child {
@@ -818,19 +822,22 @@ body {
 }
 
 .faq-item ul, .faq-item ol {
-  margin: 1rem 0;
-  padding-left: 1.5rem;
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .faq-item li {
   margin-bottom: 0.5rem;
-  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
   .faq-item {
-    padding: 1.5rem;
+    padding: 1.25rem;
     margin-bottom: 1rem;
+  }
+  
+  .hero .faq-content {
+    gap: 1.5rem;
   }
 }
 
