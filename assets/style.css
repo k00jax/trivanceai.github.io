@@ -30,6 +30,16 @@ body {
   padding-top: 0.25rem;
 }
 
+.logo a {
+  display: block;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.logo a:hover {
+  opacity: 0.8;
+}
+
 .logo img {
   max-width: 300px;
   height: auto;
