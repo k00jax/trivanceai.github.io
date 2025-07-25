@@ -818,7 +818,7 @@ body {
 
 .faq-item p {
   margin: 0 0 1rem 0;
-  padding: 0;
+  padding: 0 0 0 2rem;
 }
 
 .faq-item p:last-child {
@@ -827,7 +827,7 @@ body {
 
 .faq-item ul,
 .faq-item ol {
-  margin: 0 0 1.5rem 1.25rem;
+  margin: 0 0 1.5rem 3.25rem;
   padding: 0;
 }
 
