@@ -452,6 +452,12 @@ body {
   text-align: center;
 }
 
+/* Ensure ALL images in pricing flow are small */
+.pricing-flow img {
+  width: 80px !important;
+  height: 80px !important;
+}
+
 .pricing-flow {
   max-width: 900px;
   margin: 0 auto;
@@ -501,6 +507,78 @@ body {
 .pricing-text li {
   margin-bottom: 0.5rem;
   line-height: 1.6;
+}
+
+/* Project Cards (Custom Projects Page) */
+.project-types {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.project-types h2 {
+  color: var(--accent-blue);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid #f0f0f0;
+  text-align: center;
+}
+
+.project-card img {
+  width: 80px !important;
+  height: 80px !important;
+  margin: 0 auto 1.5rem auto;
+  display: block;
+}
+
+.project-card h3 {
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.project-card .price-tag {
+  font-weight: 600;
+  color: var(--accent-green);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* CTA Block for Custom Projects */
+.cta-block {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.cta-block h2 {
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+}
+
+.cta-block p {
+  margin-bottom: 2rem;
+  color: #666;
 }
 
 .callout-block {
@@ -770,6 +848,18 @@ body {
   }
   
   .footer-cta {
+    padding: 2rem 1rem;
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-card {
+    padding: 1.5rem;
+  }
+  
+  .cta-block {
     padding: 2rem 1rem;
   }
 }
