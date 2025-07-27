@@ -470,8 +470,8 @@ body {
 }
 
 .pricing-block img {
-  width: 80px;
-  height: 80px;
+  width: 80px !important;
+  height: 80px !important;
   flex-shrink: 0;
   order: 2;
 }
@@ -745,6 +745,8 @@ body {
   }
   
   .pricing-block img {
+    width: 80px !important;
+    height: 80px !important;
     order: 1;
     margin-bottom: 1rem;
   }
