@@ -19,12 +19,14 @@
     }
     .flow-step {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       background: #f7f7f7;
       border-radius: 12px;
       padding: 2rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       transition: transform 0.3s;
+      width: 100%;
+      box-sizing: border-box;
     }
     .flow-step:hover {
       transform: scale(1.02);
@@ -36,6 +38,7 @@
     }
     .flow-step h3 {
       margin: 0 0 0.5rem 0;
+      min-height: 2rem;
     }
     .flow-branch {
       display: flex;
@@ -45,6 +48,11 @@
     }
     .flow-branch .flow-step {
       flex: 1 1 300px;
+      display: flex;
+      flex-direction: row;
+    }
+    .flow-branch .flow-step h3 {
+      min-height: 2.25rem;
     }
   </style>
 </head>
@@ -66,10 +74,10 @@
   </header>
 
   <section class="hero">
-    <h1>Where Thought Becomes System</h1>
+    <h1>It All Starts With a Conversation</h1>
     <p class="subtext">
-      Most companies don't need another tool — they need a trusted AI advisor.<br>
-      We help you stay grounded with clear advice and executable strategy.
+      Before AI tools or strategy decks, there’s a human discussion.<br>
+      Let’s talk about where your business is — and where it could go.
     </p>
     <div class="cta-buttons">
       <a href="https://calendly.com/kyle-fonger-trivanceai/30min" class="button">Book Your Free Discovery Call</a>
