@@ -201,25 +201,25 @@ body {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-bottom: 2rem;
 }
 
-/* First row: 3 cards, each spanning 2 columns */
-.service-grid .service-card:nth-child(1),
+/* First row: AI Strategy Reports - spans 4 columns (full width) */
+.service-grid .service-card:nth-child(1) {
+  grid-column: 1 / 5;
+}
+
+/* Second row: Hands-On Implementation and Team Training - each spans 2 columns */
 .service-grid .service-card:nth-child(2),
 .service-grid .service-card:nth-child(3) {
   grid-column: span 2;
 }
 
-/* Second row: 2 cards, each spanning 3 columns to fill the width */
+/* Third row: Ongoing Advisory - spans 4 columns (full width) */
 .service-grid .service-card:nth-child(4) {
-  grid-column: 1 / 4;
-}
-
-.service-grid .service-card:nth-child(5) {
-  grid-column: 4 / 7;
+  grid-column: 1 / 5;
 }
 
 /* On smaller screens, use simpler layout */
@@ -231,8 +231,7 @@ body {
   .service-grid .service-card:nth-child(1),
   .service-grid .service-card:nth-child(2),
   .service-grid .service-card:nth-child(3),
-  .service-grid .service-card:nth-child(4),
-  .service-grid .service-card:nth-child(5) {
+  .service-grid .service-card:nth-child(4) {
     grid-column: auto;
   }
 }
