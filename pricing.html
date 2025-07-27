@@ -3,11 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pricing - Trivance AI</title>
+  <title>Services - Trivance AI</title>
   <link rel="icon" type="image/png" href="assets/Trivance_AI_Logo_Small_no_background.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="assets/style.css"/>
   <script src="assets/main.js" defer></script>
+  <style>
+    .flow-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 4rem auto;
+      gap: 4rem;
+      max-width: 900px;
+    }
+    .flow-step {
+      display: flex;
+      align-items: center;
+      background: #f7f7f7;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .flow-step:hover {
+      transform: scale(1.02);
+    }
+    .flow-step img {
+      width: 80px;
+      height: auto;
+      margin-right: 2rem;
+    }
+    .flow-step h3 {
+      margin: 0 0 0.5rem 0;
+    }
+    .flow-branch {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .flow-branch .flow-step {
+      flex: 1 1 300px;
+    }
+  </style>
 </head>
 <body>
   <header class="navbar">
@@ -18,8 +57,8 @@
     </div>
     <nav class="nav-links">
       <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="pricing.html" class="active">Pricing</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="pricing.html">Pricing</a>
       <a href="faq.html">FAQ</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
@@ -27,69 +66,57 @@
   </header>
 
   <section class="hero">
-    <h1>Clarity First. Then Tools.</h1>
+    <h1>Where Thought Becomes System</h1>
     <p class="subtext">
-      Start with structured insight — so you're only building what's valuable.<br>
+      Most companies don't need another tool — they need a trusted AI advisor.<br>
+      We help you stay grounded with clear advice and executable strategy.
     </p>
+    <div class="cta-buttons">
+      <a href="https://calendly.com/kyle-fonger-trivanceai/30min" class="button">Book Your Free Discovery Call</a>
+      <a href="mailto:kyle.fonger@trivanceai.com" class="button secondary">Send an Email</a>
+    </div>
   </section>
 
-  <section class="pricing-flow">
-    <div class="pricing-block">
-      <img src="assets/discovery-call-logo.png" alt="Discovery Icon">
-      <div class="pricing-text">
-        <h2>1. Discovery Call</h2>
-        <p><strong>$0</strong> – 30-minute call to explore your workflows, pain points, and goals. No pitch. Just clarity.</p>
+  <section class="flow-container">
+    <div class="flow-step">
+      <img src="assets/discovery-call-logo.png" alt="Discovery">
+      <div>
+        <h3>1. Discovery Call</h3>
+        <p>30-min consult to explore needs, goals, and where AI might apply. No pitch — just clarity.</p>
       </div>
     </div>
 
-    <div class="pricing-block">
-      <img src="assets/clarity-sprint.png" alt="Strategy Icon">
-      <div class="pricing-text">
-        <h2>2. AI Strategy Report</h2>
-        <p><strong>$1,500–$2,500</strong> – Deep diagnostic with actionable AI roadmap:</p>
-        <ul>
-          <li>Friction mapping and use case discovery</li>
-          <li>Tool recommendations</li>
-          <li>Pilot plan and impact estimates</li>
-        </ul>
+    <div class="flow-step">
+      <img src="assets/ai_strategy_audits_logo.png" alt="Strategy Report">
+      <div>
+        <h3>2. AI Strategy Report</h3>
+        <p>A tactical roadmap that identifies high-impact AI opportunities, tools, and rollout plan.</p>
       </div>
     </div>
 
-    <div class="pricing-block">
-      <img src="assets/doc-gpt.png" alt="Execution Icon">
-      <div class="pricing-text">
-        <h2>3. Hands-On Implementation Projects</h2>
-        <p>Starts at <strong>$2,000</strong> – Hands-on builds from your strategy report:</p>
-        <ul>
-          <li>Document GPT Assistant – $2,000–$4,000</li>
-          <li>Meeting Triage Bot – $3,000–$5,000</li>
-          <li>Custom Platforms & Workflows – scoped by project</li>
-        </ul>
+    <div class="flow-branch">
+      <div class="flow-step">
+        <img src="assets/llm_training_logo.png" alt="Training">
+        <div>
+          <h3>Team Training</h3>
+          <p>Interactive workshops to level up your team’s AI skills, tailored to their actual workflows.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="pricing-block">
-      <img src="assets/llm_training_logo.png" alt="Training Icon">
-      <div class="pricing-text">
-        <h2>4. Team Training</h2>
-        <p><strong>$2,500–$10,000</strong> – Upskill your team with hands-on AI education:</p>
-        <ul>
-          <li>AI Jumpstart (1–2 sessions): $2,500–$4,000</li>
-          <li>Operational AI (4–6 sessions): $5,000–$10,000</li>
-        </ul>
+      <div class="flow-step">
+        <img src="assets/doc-gpt.png" alt="Execution">
+        <div>
+          <h3>Hands-On Implementation</h3>
+          <p>We implement the solution — whether it’s a GPT assistant, meeting bot, or process automation.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="pricing-block">
-      <img src="assets/fractional-ai.png" alt="Retainer Icon">
-      <div class="pricing-text">
-        <h2>5. Ongoing AI Advisory</h2>
-        <p>Monthly retainers for strategic guidance and continuity:</p>
-        <ul>
-          <li><strong>AI Advisor</strong> – $1,500/mo: Trend briefs, strategy check-ins, async Q&A</li>
-          <li><strong>AI Builder</strong> – $3,500/mo: Everything in Advisor + Slack access, tool evaluation, live strategy</li>
-          <li><strong>AI Partner</strong> – $7,500/mo: All of Builder + biweekly builds, custom tools, 8 hrs/mo support</li>
-        </ul>
+      <div class="flow-step">
+        <img src="assets/ongoing_partnership_logo.png" alt="Ongoing Advisory">
+        <div>
+          <h3>Ongoing Advisory</h3>
+          <p>Monthly access to AI strategy, tool evaluations, implementation support, and fractional leadership.</p>
+        </div>
       </div>
     </div>
   </section>
