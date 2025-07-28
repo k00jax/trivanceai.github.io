@@ -4,10 +4,299 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Trivance AI</title>
-  <link rel="icon" type="image/png" href="assets/Trivance_Logo_Small_Vector.png">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <link rel="icon" type="image/png" href="assets/Trivance_Logo_Small_Vecto  <section class="  <section class="framework" role="main" aria-labelledby="framework-heading">
+    <h2 id="framework-heading">The Trivance Approach</h2>
+    <div class="steps" role="list" aria-label="Three-step Trivance approach">
+      <div class="step" role="listitem" aria-labelledby="step-1-heading">
+        <h3 id="step-1-heading">1. Clarity</h3>
+        <p>We start with real conversation. Where's the friction? What do you actually need?</p>
+      </div>
+      <div class="step" role="listitem" aria-labelledby="step-2-heading">
+        <h3 id="step-2-heading">2. Strategy</h3>
+        <p>You get a practical roadmap. Tools, timing, priorities — laid out for your team.</p>
+      </div>
+      <div class="step" role="listitem" aria-labelledby="step-3-heading">
+        <h3 id="step-3-heading">3. Execution / Training / Advisory</h3>
+        <p>We can build it, train your team, or stay on as your AI advisor — it's your call.</p>
+      </div>
+    </div>
+  </section>r" aria-labelledby="hero-quote">
+    <p class="quote" id="hero-quote">"Most teams don't need another AI tool. They need a map."</p>
+    <p class="brandline" aria-label="Company tagline">AI Strategy That Works.</p>
+    <p class="subtext">If you're going to advance — Trivance.</p>
+    <div class="cta-buttons" role="group" aria-label="Call to action buttons">
+      <a href="https://calendly.com/kyle-fonger-trivanceai/30min" class="button" aria-label="Book your free discovery call with Trivance AI">Book Your Free Discovery Call</a>
+      <a href="mailto:kyle.fonger@trivanceai.com" class="button secondary" aria-label="Send an email to Trivance AI">Send an Email</a>
+    </div>
+  </section>  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="assets/style.css"/>
   <script src="assets/main.js" defer></script>
+  <style>
+    /* Homepage Hero Styles */
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .quote {
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      font-style: italic;
+      color: #444;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .brandline {
+      font-weight: 700;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 1rem;
+      color: var(--accent-blue, #3478f6);
+    }
+
+    .hero .subtext {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: #666;
+      margin-bottom: 2.5rem;
+      line-height: 1.5;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    /* Framework Section */
+    .framework {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .framework::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, #ddd 50%, transparent 100%);
+    }
+
+    .framework h2 {
+      font-size: clamp(1.8rem, 4vw, 2.2rem);
+      margin-bottom: 3rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .steps {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .step {
+      flex: 1 1 280px;
+      max-width: 350px;
+      background: white;
+      padding: 2.5rem 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(52, 120, 246, 0.1);
+      position: relative;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .step.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .step:nth-child(1).animate { transition-delay: 0.1s; }
+    .step:nth-child(2).animate { transition-delay: 0.2s; }
+    .step:nth-child(3).animate { transition-delay: 0.3s; }
+
+    .step:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 30px rgba(52, 120, 246, 0.15);
+      border-color: var(--accent-blue, #3478f6);
+    }
+
+    .step h3 {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      margin-bottom: 1rem;
+      color: var(--accent-blue, #3478f6);
+      font-weight: 600;
+    }
+
+    .step p {
+      color: #666;
+      line-height: 1.6;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      margin: 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 4rem 1.5rem 3rem;
+      }
+
+      .quote {
+        margin-bottom: 1rem;
+      }
+
+      .brandline {
+        margin-bottom: 0.5rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .cta-buttons .button {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+      }
+
+      .framework {
+        padding: 3rem 1.5rem;
+      }
+
+      .framework h2 {
+        margin-bottom: 2rem;
+      }
+
+      .steps {
+        gap: 1.5rem;
+      }
+
+      .step {
+        flex: 1 1 100%;
+        max-width: none;
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 3rem 1rem 2rem;
+      }
+
+      .framework {
+        padding: 2.5rem 1rem;
+      }
+
+      .step {
+        padding: 1.5rem 1rem;
+      }
+    }
+
+    /* Accessibility Improvements */
+    @media (prefers-reduced-motion: reduce) {
+      .step {
+        transition: none;
+      }
+      
+      .step:hover {
+        transform: none;
+      }
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+      .step {
+        border: 2px solid #000;
+      }
+      
+      .step h3 {
+        color: #000;
+      }
+    }
+  </style>
+  <script>
+    // Scroll-based animation for steps
+    document.addEventListener('DOMContentLoaded', function() {
+      const steps = document.querySelectorAll('.step');
+      
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      }, observerOptions);
+
+      steps.forEach(step => {
+        observer.observe(step);
+      });
+
+      // Keyboard navigation improvements
+      const focusableElements = document.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+      
+      focusableElements.forEach(element => {
+        element.addEventListener('focus', function() {
+          this.style.outline = '2px solid var(--accent-blue, #3478f6)';
+          this.style.outlineOffset = '2px';
+        });
+        
+        element.addEventListener('blur', function() {
+          this.style.outline = '';
+          this.style.outlineOffset = '';
+        });
+      });
+
+      // Skip to main content functionality
+      if (!document.querySelector('.skip-link')) {
+        const skipLink = document.createElement('a');
+        skipLink.href = '#framework-heading';
+        skipLink.textContent = 'Skip to main content';
+        skipLink.className = 'skip-link';
+        skipLink.style.cssText = `
+          position: absolute;
+          top: -40px;
+          left: 6px;
+          background: var(--accent-blue, #3478f6);
+          color: white;
+          padding: 8px;
+          text-decoration: none;
+          border-radius: 4px;
+          z-index: 1000;
+          transition: top 0.3s;
+        `;
+        
+        skipLink.addEventListener('focus', function() {
+          this.style.top = '6px';
+        });
+        
+        skipLink.addEventListener('blur', function() {
+          this.style.top = '-40px';
+        });
+        
+        document.body.insertBefore(skipLink, document.body.firstChild);
+      }
+    });
+  </script>
 </head>
 <body>
   <header class="navbar">
@@ -26,43 +315,37 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
-    <h1>Trusted AI Guidance in a World of Noise</h1>
-    <p class="subtext">
-      Trivance AI helps small and mid-sized teams move fast on AI — with clear strategy, practical execution, and thoughtful guidance.
-    </p>
+    <p class="quote">“Most teams don’t need another AI tool. They need a map.”</p>
+    <p class="brandline">AI Strategy That Works.</p>
+    <p class="subtext">If you're going to advance — Trivance.</p>
     <div class="cta-buttons">
       <a href="https://calendly.com/kyle-fonger-trivanceai/30min" class="button">Book Your Free Discovery Call</a>
       <a href="mailto:kyle.fonger@trivanceai.com" class="button secondary">Send an Email</a>
     </div>
   </section>
 
-  <section class="services-preview">
-    <h2>How We Help</h2>
-    <div class="service-grid">
-      <a href="services-pages/strategy-audits.html" class="service-card">
-        <img src="assets/ai_strategy_audits_logo.png" alt="Strategy Icon">
-        <h3>AI Strategy Reports</h3>
-        <p>Our most popular starting point. A custom roadmap built from your tools, goals, and gaps.</p>
-      </a>
-      <a href="services-pages/custom-projects.html" class="service-card">
-        <img src="assets/document_gpts_logo.png" alt="Docs Icon">
-        <h3>Hands-On Implementation</h3>
-        <p>We build one of your recommended solutions — like a Document GPT or Meeting Bot — fast and clean.</p>
-      </a>
-      <a href="services-pages/llm-training.html" class="service-card">
-        <img src="assets/llm_training_logo.png" alt="Training Icon">
-        <h3>Team Training</h3>
-        <p>Boost internal capability with practical, role-based LLM training for your team or department.</p>
-      </a>
-      <a href="services-pages/ai-consulting.html" class="service-card">
-        <img src="assets/ongoing_partnership_logo.png" alt="Insight Icon">
-        <h3>Ongoing Advisory</h3>
-        <p>Monthly partnership tiers for lean teams who want strategic guidance and execution support on tap.</p>
-      </a>
+  <!-- Framework Section -->
+  <section class="framework">
+    <h2>The Trivance Approach</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>1. Clarity</h3>
+        <p>We start with real conversation. Where’s the friction? What do you actually need?</p>
+      </div>
+      <div class="step">
+        <h3>2. Strategy</h3>
+        <p>You get a practical roadmap. Tools, timing, priorities — laid out for your team.</p>
+      </div>
+      <div class="step">
+        <h3>3. Execution / Training / Advisory</h3>
+        <p>We can build it, train your team, or stay on as your AI advisor — it’s your call.</p>
+      </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Trivance AI &bullet; Founded by Kyle Fonger &bullet; <a href="contact.html">Contact</a></p>
   </footer>
