@@ -7,73 +7,6 @@
   <link rel="icon" type="image/png" href="assets/Trivance_Logo_Small_Vector.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="assets/style.css"/>
-  <style>
-    body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
-    .hero { text-align: center; padding: 4rem 2rem 2rem; }
-    .hero-title { font-size: 2.5rem; color: #3478f6; margin-bottom: 1rem; }
-    .quote { font-style: italic; color: #555; margin-bottom: 1rem; }
-    .subtext { color: #666; margin-bottom: 2rem; }
-    .cta-buttons a { margin: 0 1rem; }
-
-    .framework { background: #f4f6f8; padding: 3rem 2rem; text-align: center; }
-    .steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
-
-    .step-column {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex: 1 1 30%;
-      max-width: 320px;
-    }
-
-    .step-link {
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-      width: 100%;
-    }
-
-    .step {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-    }
-
-    .step img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-    }
-
-    .step h3 { color: #3478f6; margin-bottom: 0.5rem; }
-    .step-link:hover .step { transform: translateY(-5px); }
-    .step-link.active .step { border: 2px solid #3478f6; }
-
-    .step-detail {
-      display: none;
-      margin-top: 1.5rem;
-    }
-
-    .step-detail.active {
-      display: block;
-    }
-
-    .step-detail img {
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #fff;
-      border-top: 1px solid #ddd;
-    }
-  </style>
 </head>
 <body>
   <header class="navbar">
@@ -143,6 +76,15 @@
   </footer>
 
   <script>
+    // Animate framework section on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const framework = document.querySelector('.framework');
+      if (framework) {
+        framework.style.opacity = '1';
+        framework.style.transform = 'translateY(0)';
+      }
+    });
+
     const stepLinks = document.querySelectorAll('.step-link');
     const detailImages = {
       clarity: 'assets/clarity-home-details.png',

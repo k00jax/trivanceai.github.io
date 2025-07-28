@@ -1109,16 +1109,15 @@ body {
   padding: 0;
   width: 100%;
   opacity: 0;
-  height: auto;
+  max-height: 0;
   overflow: hidden;
   transition: all 0.4s ease;
 }
 
 .step-detail.active {
   opacity: 1;
-  height: auto;
+  max-height: 400px;
   padding: 1.5rem;
-  display: block;
 }
 
 .step-detail img {
@@ -1180,4 +1179,5 @@ body {
 .framework {
   opacity: 0;
   transform: translateY(30px);
+  transition: all 0.6s ease;
 }
