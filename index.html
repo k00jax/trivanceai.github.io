@@ -6,7 +6,29 @@
   <title>Trivance AI</title>
   <link rel="icon" type="image/png" href="assets/Trivance_Logo_Small_Vector.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="assets/style.css"/>
+  <link rel="stylesheet"       <div class="step      <div         </div>
+      </div>
+
+    </div>
+    
+    <!-- Dynamic Detail Panel -->
+    <div id="step-details" class="step-details-container" aria-live="polite"></div>
+  </section>
+
+
+  <!-- Footer -->tep-link" data-step="execution" role="button" tabindex="0" aria-label="Reveal details about our Execution, Training, and Advisory services">
+        <div class="step" role="listitem" aria-labelledby="step-3-heading">
+          <img src="assets/execution_training_advisory-home-v3.png" alt="Execution, Training, Advisory Illustration" style="max-width: 100%; height: auto; margin-bottom: 1.5rem;">
+          <h3 id="step-3-heading">3. Execution / Training / Advisory</h3>
+          <p>We can build it, train your team, or stay on as your AI advisor — it's your call.</p>
+        </div>
+      </div>data-step="clarity" role="button" tabindex="0" aria-label="Reveal details about our Clarity process">
+        <div class="step" role="listitem" aria-labelledby="step-1-heading">
+          <img src="assets/clarity-home-v3.png" alt="Clarity Illustration" style="max-width: 100%; height: auto; margin-bottom: 1.5rem;">
+          <h3 id="step-1-heading">1. Clarity</h3>
+          <p>We start with real conversation. Where's the friction? What do you actually need?</p>
+        </div>
+      </div>ssets/style.css"/>
   <script src="assets/main.js" defer></script>
   <style>
     /* Homepage Hero Styles */
@@ -272,6 +294,39 @@
       outline: 3px solid #3478f6;
       outline-offset: 4px;
     }
+
+    /* Step Details Panel */
+    .step-details-container {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 200px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .step-details-container.active {
+      opacity: 1;
+    }
+
+    .step-details-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: opacity 0.4s ease;
+    }
+
+    /* Active state for selected step */
+    .step-link.active .step {
+      border-color: #3478f6;
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+    }
+
+    .step-link.active .step::before {
+      opacity: 1;
+    }
   </style>
   <script>
     // Enhanced scroll-based animation for steps
@@ -324,6 +379,49 @@
         stepLink.addEventListener('blur', function() {
           this.style.outline = '';
           this.style.outlineOffset = '';
+        });
+      });
+
+      // Interactive Step Details Logic
+      const detailImages = {
+        'clarity': 'assets/clarity-home-details.png',
+        'strategy': 'assets/strategy-home-details.png',
+        'execution': 'assets/execution_training_advisory-home-details.png'
+      };
+
+      stepLinks.forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+
+          const key = link.dataset.step;
+          const detailContainer = document.getElementById('step-details');
+
+          if (!detailContainer || !detailImages[key]) return;
+
+          // Remove active class from all step links
+          stepLinks.forEach(stepLink => stepLink.classList.remove('active'));
+          
+          // Add active class to clicked step
+          link.classList.add('active');
+
+          // Fade out current content
+          detailContainer.style.opacity = 0;
+
+          setTimeout(() => {
+            detailContainer.innerHTML = `
+              <img src="${detailImages[key]}" alt="${key} step details" loading="lazy">
+            `;
+            detailContainer.classList.add('active');
+            detailContainer.style.opacity = 1;
+          }, 250);
+        });
+
+        // Keyboard support for Enter and Space
+        link.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+          }
         });
       });
 
@@ -390,7 +488,7 @@
 
   <!-- Framework Section -->
   <section class="framework" role="main" aria-labelledby="framework-heading">
-    <h1 id="hero-heading" class="hero-title">The Trivance Approach</h1>
+    <h2 id="framework-heading">The Trivance Approach</h2>
     <div class="steps" role="list" aria-label="Three-step Trivance approach">
 
       <a href="services.html" class="step-link" aria-label="Learn more about our Clarity process">
@@ -401,13 +499,13 @@
         </div>
       </a>
 
-      <a href="services.html" class="step-link" aria-label="Learn more about our Strategy process">
+      <div class="step-link" data-step="strategy" role="button" tabindex="0" aria-label="Reveal details about our Strategy process">
         <div class="step" role="listitem" aria-labelledby="step-2-heading">
           <img src="assets/strategy-home-v3.png" alt="Strategy Illustration" style="max-width: 100%; height: auto; margin-bottom: 1.5rem;">
           <h3 id="step-2-heading">2. Strategy</h3>
           <p>You get a practical roadmap. Tools, timing, priorities — laid out for your team.</p>
         </div>
-      </a>
+      </div>
 
       <a href="services.html" class="step-link" aria-label="Learn more about our Execution, Training, and Advisory services">
         <div class="step" role="listitem" aria-labelledby="step-3-heading">
