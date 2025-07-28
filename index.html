@@ -1,37 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta char      <div class="step-colu      
-       
-      <div class="step-column">
-        <div class="step-link" data-step="execution" role="button" tabindex="0">
-          <div class="step">
-            <img src="assets/execution_training_advisory-home-v3.png" alt="Execution Illustration">
-            <h3>3. Execution / Training / Advisory</h3>
-            <p>We can build it, train your team, or stay on as your AI advisor — it's your call.</p>
-          </div>
-        </div>
-        <div class="step-detail" id="execution-detail"></div>
-      </div>
-    </div>v class="step-column">
-        <div class="step-link" data-step="execution" role="button" tabindex="0">
-          <div class="step">
-            <img src="assets/execution_training_advisory-home-v3.png" alt="Execution Illustration">
-            <h3>3. Execution / Training / Advisory</h3>
-            <p>We can build it, train your team, or stay on as your AI advisor — it's your call.</p>
-          </div>
-        </div>
-        <div class="step-detail" id="execution-detail"></div>
-      </div>       <div class="step-link" data-step="clarity" role="button" tabindex="0">
-          <div class="step">
-            <img src="assets/clarity-home-v3.png" alt="Clarity Illustration">
-            <h3>1. Clarity</h3>
-            <p>We start with real conversation. Where's the friction? What do you actually need?</p>
-          </div>
-        </div>
-        <div class="step-detail" id="clarity-detail"></div>
-      </div>F-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Trivance AI</title>
   <link rel="icon" type="image/png" href="assets/Trivance_Logo_Small_Vector.png">
@@ -44,16 +14,65 @@
     .quote { font-style: italic; color: #555; margin-bottom: 1rem; }
     .subtext { color: #666; margin-bottom: 2rem; }
     .cta-buttons a { margin: 0 1rem; }
+
     .framework { background: #f4f6f8; padding: 3rem 2rem; text-align: center; }
     .steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
-    .step-link { cursor: pointer; text-decoration: none; color: inherit; flex: 1 1 280px; max-width: 300px; }
-    .step { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.3s; }
-    .step img { max-width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px; }
+
+    .step-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1 1 30%;
+      max-width: 320px;
+    }
+
+    .step-link {
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+    }
+
+    .step {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .step img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+
     .step h3 { color: #3478f6; margin-bottom: 0.5rem; }
     .step-link:hover .step { transform: translateY(-5px); }
-    #step-details { margin-top: 2rem; text-align: center; opacity: 0; transition: opacity 0.4s ease; }
-    #step-details img { max-width: 100%; border-radius: 12px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); }
     .step-link.active .step { border: 2px solid #3478f6; }
+
+    .step-detail {
+      display: none;
+      margin-top: 1.5rem;
+    }
+
+    .step-detail.active {
+      display: block;
+    }
+
+    .step-detail img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #fff;
+      border-top: 1px solid #ddd;
+    }
   </style>
 </head>
 <body>
@@ -84,34 +103,39 @@
   <section class="framework" role="main" aria-labelledby="framework-heading">
     <h2 id="framework-heading">The Trivance Approach</h2>
     <div class="steps" role="list">
-      <div class="step-link" data-step="clarity" role="button" tabindex="0">
-        <div class="step">
-          <img src="assets/clarity-home-v3.png" alt="Clarity Illustration">
-          <h3>1. Clarity</h3>
-          <p>We start with real conversation. Where’s the friction? What do you actually need?</p>
+      <div class="step-column">
+        <div class="step-link" data-step="clarity" role="button" tabindex="0">
+          <div class="step" aria-labelledby="step-1-heading">
+            <img src="assets/clarity-home-v3.png" alt="Clarity Illustration">
+            <h3 id="step-1-heading">1. Clarity</h3>
+            <p>We start with real conversation. Where’s the friction? What do you actually need?</p>
+          </div>
         </div>
+        <div class="step-detail" id="clarity-detail"></div>
       </div>
-      
+
       <div class="step-column">
         <div class="step-link" data-step="strategy" role="button" tabindex="0">
-          <div class="step">
+          <div class="step" aria-labelledby="step-2-heading">
             <img src="assets/strategy-home-v3.png" alt="Strategy Illustration">
-            <h3>2. Strategy</h3>
+            <h3 id="step-2-heading">2. Strategy</h3>
             <p>You get a practical roadmap. Tools, timing, priorities — laid out for your team.</p>
           </div>
         </div>
         <div class="step-detail" id="strategy-detail"></div>
       </div>
-      <div class="step-link" data-step="execution" role="button" tabindex="0">
-        <div class="step">
-          <img src="assets/execution_training_advisory-home-v3.png" alt="Execution Illustration">
-          <h3>3. Execution / Training / Advisory</h3>
-          <p>We can build it, train your team, or stay on as your AI advisor — it’s your call.</p>
+
+      <div class="step-column">
+        <div class="step-link" data-step="execution" role="button" tabindex="0">
+          <div class="step" aria-labelledby="step-3-heading">
+            <img src="assets/execution_training_advisory-home-v3.png" alt="Execution Illustration">
+            <h3 id="step-3-heading">3. Execution / Training / Advisory</h3>
+            <p>We can build it, train your team, or stay on as your AI advisor — it's your call.</p>
+          </div>
         </div>
+        <div class="step-detail" id="execution-detail"></div>
       </div>
     </div>
-
-
   </section>
 
   <footer class="footer">
@@ -131,14 +155,11 @@
         const step = link.dataset.step;
         if (!step || !detailImages[step]) return;
 
-        // Remove active state from all links and details
         stepLinks.forEach(l => l.classList.remove('active'));
         document.querySelectorAll('.step-detail').forEach(d => d.classList.remove('active'));
 
-        // Add active state to clicked link
         link.classList.add('active');
 
-        // Show the corresponding detail panel
         const detailContainer = document.getElementById(`${step}-detail`);
         if (detailContainer) {
           detailContainer.innerHTML = `<img src="${detailImages[step]}" alt="${step} details">`;
@@ -146,7 +167,6 @@
         }
       });
 
-      // Add keyboard support
       link.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
@@ -154,27 +174,6 @@
         }
       });
     });
-
-    // Intersection Observer for scroll animations (if needed)
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationDelay = '0.2s';
-          entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
-        }
-      });
-    }, observerOptions);
-
-    // Observe framework section
-    const frameworkSection = document.querySelector('.framework');
-    if (frameworkSection) {
-      observer.observe(frameworkSection);
-    }
   </script>
 </body>
 </html>
