@@ -8,6 +8,357 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="assets/style.css"/>
   <script src="assets/main.js" defer></script>
+  <style>
+    /* Homepage Hero Styles */
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      margin-bottom: 2rem;
+      color: var(--accent-blue, #3478f6);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .quote {
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      font-style: italic;
+      color: #444;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .hero .subtext {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: #666;
+      margin-bottom: 2.5rem;
+      line-height: 1.5;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    /* Enhanced Framework Section */
+    .framework {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .framework::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, #ddd 50%, transparent 100%);
+    }
+
+    .framework h2 {
+      font-size: clamp(1.8rem, 4vw, 2.2rem);
+      margin-bottom: 3rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .steps {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .step-link {
+      flex: 1 1 320px;
+      max-width: 380px;
+      min-height: 220px;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .step-link.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .step-link:nth-child(1).animate { transition-delay: 0.1s; }
+    .step-link:nth-child(2).animate { transition-delay: 0.2s; }
+    .step-link:nth-child(3).animate { transition-delay: 0.3s; }
+
+    .step {
+      background: white;
+      padding: 2.5rem 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(52, 120, 246, 0.1);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .step::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 16px;
+      z-index: 1;
+    }
+
+    .step-link:hover .step {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(52, 120, 246, 0.15);
+      border-color: #3478f6;
+    }
+
+    .step-link:hover .step::before {
+      opacity: 1;
+    }
+
+    .step-link:focus {
+      outline: 3px solid #3478f6;
+      outline-offset: 4px;
+      border-radius: 16px;
+    }
+
+    .step h3 {
+      font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+      margin-bottom: 1rem;
+      color: #3478f6;
+      font-weight: 600;
+      position: relative;
+      z-index: 2;
+    }
+
+    .step p {
+      color: #444;
+      line-height: 1.6;
+      font-size: clamp(0.95rem, 2vw, 1.05rem);
+      margin: 0;
+      position: relative;
+      z-index: 2;
+      flex-grow: 1;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 4rem 1.5rem 3rem;
+      }
+
+      .hero-title {
+        margin-bottom: 1.5rem;
+      }
+
+      .quote {
+        margin-bottom: 1rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .cta-buttons .button {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+      }
+
+      .framework {
+        padding: 3rem 1.5rem;
+      }
+
+      .framework h2 {
+        margin-bottom: 2rem;
+      }
+
+      .steps {
+        gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .step-link {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
+      }
+
+      .step {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 3rem 1rem 2rem;
+      }
+
+      .framework {
+        padding: 2.5rem 1rem;
+      }
+
+      .step {
+        padding: 1.5rem 1rem;
+      }
+    }
+
+    /* Accessibility Improvements */
+    @media (prefers-reduced-motion: reduce) {
+      .step-link,
+      .step,
+      .step::before {
+        transition: none;
+      }
+      
+      .step-link:hover .step {
+        transform: none;
+      }
+
+      .step-link {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+      .step {
+        border: 2px solid #000;
+      }
+      
+      .step h3 {
+        color: #000;
+      }
+
+      .step p {
+        color: #000;
+      }
+    }
+
+    /* Focus management for keyboard users */
+    .step-link:focus-visible {
+      outline: 3px solid #3478f6;
+      outline-offset: 4px;
+    }
+  </style>
+  <script>
+    // Enhanced scroll-based animation for steps
+    document.addEventListener('DOMContentLoaded', function() {
+      const stepLinks = document.querySelectorAll('.step-link');
+      
+      // Check if user prefers reduced motion
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      
+      if (!prefersReducedMotion) {
+        const observerOptions = {
+          threshold: 0.15,
+          rootMargin: '0px 0px -60px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+            }
+          });
+        }, observerOptions);
+
+        stepLinks.forEach(stepLink => {
+          observer.observe(stepLink);
+        });
+      } else {
+        // If reduced motion is preferred, show all elements immediately
+        stepLinks.forEach(stepLink => {
+          stepLink.style.opacity = '1';
+          stepLink.style.transform = 'none';
+        });
+      }
+
+      // Enhanced keyboard navigation
+      stepLinks.forEach(stepLink => {
+        stepLink.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+          }
+        });
+
+        // Focus management
+        stepLink.addEventListener('focus', function() {
+          this.style.outline = '3px solid #3478f6';
+          this.style.outlineOffset = '4px';
+        });
+        
+        stepLink.addEventListener('blur', function() {
+          this.style.outline = '';
+          this.style.outlineOffset = '';
+        });
+      });
+
+      // Skip to main content functionality
+      if (!document.querySelector('.skip-link')) {
+        const skipLink = document.createElement('a');
+        skipLink.href = '#framework-heading';
+        skipLink.textContent = 'Skip to main content';
+        skipLink.className = 'skip-link';
+        skipLink.style.cssText = `
+          position: absolute;
+          top: -40px;
+          left: 6px;
+          background: #3478f6;
+          color: white;
+          padding: 8px 12px;
+          text-decoration: none;
+          border-radius: 4px;
+          z-index: 1000;
+          transition: top 0.3s;
+          font-weight: 500;
+        `;
+        
+        skipLink.addEventListener('focus', function() {
+          this.style.top = '6px';
+        });
+        
+        skipLink.addEventListener('blur', function() {
+          this.style.top = '-40px';
+        });
+        
+        document.body.insertBefore(skipLink, document.body.firstChild);
+      }
+    });
+  </script>
 </head>
 <body>
   <header class="navbar">
