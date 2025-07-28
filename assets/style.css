@@ -1083,8 +1083,8 @@ body {
 }
 
 .step img {
-  width: 80px;
-  height: 80px;
+  width: 160px;
+  height: 160px;
   margin-bottom: 1rem;
   object-fit: cover;
 }
@@ -1150,8 +1150,8 @@ body {
   }
   
   .step img {
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
   }
   
   .step h3 {
