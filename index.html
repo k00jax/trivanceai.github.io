@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,464 +7,30 @@
   <title>Trivance AI</title>
   <link rel="icon" type="image/png" href="assets/Trivance_Logo_Small_Vector.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
-  <link rel="stylesheet"       <div class="step      <div         </div>
-      </div>
-
-    </div>
-    
-    <!-- Dynamic Detail Panel -->
-    <div id="step-details" class="step-details-container" aria-live="polite"></div>
-  </section>
-
-
-  <!-- Footer -->tep-link" data-step="execution" role="button" tabindex="0" aria-label="Reveal details about our Execution, Training, and Advisory services">
-        <div class="step" role="listitem" aria-labelledby="step-3-heading">
-          <img src="assets/execution_training_advisory-home-v3.png" alt="Execution, Training, Advisory Illustration" style="max-width: 100%; height: auto; margin-bottom: 1.5rem;">
-          <h3 id="step-3-heading">3. Execution / Training / Advisory</h3>
-          <p>We can build it, train your team, or stay on as your AI advisor — it's your call.</p>
-        </div>
-      </div>data-step="clarity" role="button" tabindex="0" aria-label="Reveal details about our Clarity process">
-        <div class="step" role="listitem" aria-labelledby="step-1-heading">
-          <img src="assets/clarity-home-v3.png" alt="Clarity Illustration" style="max-width: 100%; height: auto; margin-bottom: 1.5rem;">
-          <h3 id="step-1-heading">1. Clarity</h3>
-          <p>We start with real conversation. Where's the friction? What do you actually need?</p>
-        </div>
-      </div>ssets/style.css"/>
-  <script src="assets/main.js" defer></script>
+  <link rel="stylesheet" href="assets/style.css"/>
   <style>
-    /* Homepage Hero Styles */
-    .hero {
-      text-align: center;
-      padding: 6rem 2rem 4rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .hero-title {
-      font-size: clamp(2rem, 5vw, 2.8rem);
-      margin-bottom: 2rem;
-      color: var(--accent-blue, #3478f6);
-      font-weight: 700;
-      line-height: 1.2;
-    }
-
-    .quote {
-      font-size: clamp(1.2rem, 3vw, 1.5rem);
-      font-style: italic;
-      color: #444;
-      margin-bottom: 1.5rem;
-      line-height: 1.4;
-    }
-
-    .hero .subtext {
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      color: #666;
-      margin-bottom: 2.5rem;
-      line-height: 1.5;
-    }
-
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-    }
-
-    /* Enhanced Framework Section */
-    .framework {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      padding: 5rem 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .framework::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent 0%, #ddd 50%, transparent 100%);
-    }
-
-    .framework h2 {
-      font-size: clamp(1.8rem, 4vw, 2.2rem);
-      margin-bottom: 3rem;
-      color: #333;
-      font-weight: 600;
-    }
-
-    .steps {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .step-link {
-      flex: 1 1 320px;
-      max-width: 380px;
-      min-height: 220px;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      opacity: 0;
-      transform: translateY(40px);
-    }
-
-    .step-link.animate {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .step-link:nth-child(1).animate { transition-delay: 0.1s; }
-    .step-link:nth-child(2).animate { transition-delay: 0.2s; }
-    .step-link:nth-child(3).animate { transition-delay: 0.3s; }
-
-    .step {
-      background: white;
-      padding: 2.5rem 2rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      border: 1px solid rgba(52, 120, 246, 0.1);
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      cursor: pointer;
-      position: relative;
-    }
-
-    .step::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      border-radius: 16px;
-      z-index: 1;
-    }
-
-    .step-link:hover .step {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 40px rgba(52, 120, 246, 0.15);
-      border-color: #3478f6;
-    }
-
-    .step-link:hover .step::before {
-      opacity: 1;
-    }
-
-    .step-link:focus {
-      outline: 3px solid #3478f6;
-      outline-offset: 4px;
-      border-radius: 16px;
-    }
-
-    .step h3 {
-      font-size: clamp(1.2rem, 2.5vw, 1.4rem);
-      margin-bottom: 1rem;
-      color: #3478f6;
-      font-weight: 600;
-      position: relative;
-      z-index: 2;
-    }
-
-    .step p {
-      color: #444;
-      line-height: 1.6;
-      font-size: clamp(0.95rem, 2vw, 1.05rem);
-      margin: 0;
-      position: relative;
-      z-index: 2;
-      flex-grow: 1;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .hero {
-        padding: 4rem 1.5rem 3rem;
-      }
-
-      .hero-title {
-        margin-bottom: 1.5rem;
-      }
-
-      .quote {
-        margin-bottom: 1rem;
-      }
-
-      .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      .cta-buttons .button {
-        width: 100%;
-        max-width: 280px;
-        text-align: center;
-      }
-
-      .framework {
-        padding: 3rem 1.5rem;
-      }
-
-      .framework h2 {
-        margin-bottom: 2rem;
-      }
-
-      .steps {
-        gap: 1.5rem;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .step-link {
-        flex: none;
-        width: 100%;
-        max-width: 100%;
-        min-height: auto;
-      }
-
-      .step {
-        padding: 2rem 1.5rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero {
-        padding: 3rem 1rem 2rem;
-      }
-
-      .framework {
-        padding: 2.5rem 1rem;
-      }
-
-      .step {
-        padding: 1.5rem 1rem;
-      }
-    }
-
-    /* Accessibility Improvements */
-    @media (prefers-reduced-motion: reduce) {
-      .step-link,
-      .step,
-      .step::before {
-        transition: none;
-      }
-      
-      .step-link:hover .step {
-        transform: none;
-      }
-
-      .step-link {
-        opacity: 1;
-        transform: none;
-      }
-    }
-
-    /* High contrast mode support */
-    @media (prefers-contrast: high) {
-      .step {
-        border: 2px solid #000;
-      }
-      
-      .step h3 {
-        color: #000;
-      }
-
-      .step p {
-        color: #000;
-      }
-    }
-
-    /* Focus management for keyboard users */
-    .step-link:focus-visible {
-      outline: 3px solid #3478f6;
-      outline-offset: 4px;
-    }
-
-    /* Step Details Panel */
-    .step-details-container {
-      margin-top: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 200px;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-
-    .step-details-container.active {
-      opacity: 1;
-    }
-
-    .step-details-container img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-      transition: opacity 0.4s ease;
-    }
-
-    /* Active state for selected step */
-    .step-link.active .step {
-      border-color: #3478f6;
-      background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
-    }
-
-    .step-link.active .step::before {
-      opacity: 1;
-    }
+    body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
+    .hero { text-align: center; padding: 4rem 2rem 2rem; }
+    .hero-title { font-size: 2.5rem; color: #3478f6; margin-bottom: 1rem; }
+    .quote { font-style: italic; color: #555; margin-bottom: 1rem; }
+    .subtext { color: #666; margin-bottom: 2rem; }
+    .cta-buttons a { margin: 0 1rem; }
+    .framework { background: #f4f6f8; padding: 3rem 2rem; text-align: center; }
+    .steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
+    .step-link { cursor: pointer; text-decoration: none; color: inherit; flex: 1 1 280px; max-width: 300px; }
+    .step { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.3s; }
+    .step img { max-width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px; }
+    .step h3 { color: #3478f6; margin-bottom: 0.5rem; }
+    .step-link:hover .step { transform: translateY(-5px); }
+    #step-details { margin-top: 2rem; text-align: center; opacity: 0; transition: opacity 0.4s ease; }
+    #step-details img { max-width: 100%; border-radius: 12px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); }
+    .step-link.active .step { border: 2px solid #3478f6; }
   </style>
-  <script>
-    // Enhanced scroll-based animation for steps
-    document.addEventListener('DOMContentLoaded', function() {
-      const stepLinks = document.querySelectorAll('.step-link');
-      
-      // Check if user prefers reduced motion
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      
-      if (!prefersReducedMotion) {
-        const observerOptions = {
-          threshold: 0.15,
-          rootMargin: '0px 0px -60px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('animate');
-            }
-          });
-        }, observerOptions);
-
-        stepLinks.forEach(stepLink => {
-          observer.observe(stepLink);
-        });
-      } else {
-        // If reduced motion is preferred, show all elements immediately
-        stepLinks.forEach(stepLink => {
-          stepLink.style.opacity = '1';
-          stepLink.style.transform = 'none';
-        });
-      }
-
-      // Enhanced keyboard navigation
-      stepLinks.forEach(stepLink => {
-        stepLink.addEventListener('keydown', function(e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            this.click();
-          }
-        });
-
-        // Focus management
-        stepLink.addEventListener('focus', function() {
-          this.style.outline = '3px solid #3478f6';
-          this.style.outlineOffset = '4px';
-        });
-        
-        stepLink.addEventListener('blur', function() {
-          this.style.outline = '';
-          this.style.outlineOffset = '';
-        });
-      });
-
-      // Interactive Step Details Logic
-      const detailImages = {
-        'clarity': 'assets/clarity-home-details.png',
-        'strategy': 'assets/strategy-home-details.png',
-        'execution': 'assets/execution_training_advisory-home-details.png'
-      };
-
-      stepLinks.forEach(link => {
-        link.addEventListener('click', e => {
-          e.preventDefault();
-
-          const key = link.dataset.step;
-          const detailContainer = document.getElementById('step-details');
-
-          if (!detailContainer || !detailImages[key]) return;
-
-          // Remove active class from all step links
-          stepLinks.forEach(stepLink => stepLink.classList.remove('active'));
-          
-          // Add active class to clicked step
-          link.classList.add('active');
-
-          // Fade out current content
-          detailContainer.style.opacity = 0;
-
-          setTimeout(() => {
-            detailContainer.innerHTML = `
-              <img src="${detailImages[key]}" alt="${key} step details" loading="lazy">
-            `;
-            detailContainer.classList.add('active');
-            detailContainer.style.opacity = 1;
-          }, 250);
-        });
-
-        // Keyboard support for Enter and Space
-        link.addEventListener('keydown', function(e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            this.click();
-          }
-        });
-      });
-
-      // Skip to main content functionality
-      if (!document.querySelector('.skip-link')) {
-        const skipLink = document.createElement('a');
-        skipLink.href = '#framework-heading';
-        skipLink.textContent = 'Skip to main content';
-        skipLink.className = 'skip-link';
-        skipLink.style.cssText = `
-          position: absolute;
-          top: -40px;
-          left: 6px;
-          background: #3478f6;
-          color: white;
-          padding: 8px 12px;
-          text-decoration: none;
-          border-radius: 4px;
-          z-index: 1000;
-          transition: top 0.3s;
-          font-weight: 500;
-        `;
-        
-        skipLink.addEventListener('focus', function() {
-          this.style.top = '6px';
-        });
-        
-        skipLink.addEventListener('blur', function() {
-          this.style.top = '-40px';
-        });
-        
-        document.body.insertBefore(skipLink, document.body.firstChild);
-      }
-    });
-  </script>
 </head>
 <body>
   <header class="navbar">
     <div class="logo">
-      <a href="index.html">
-        <img id="logoImage" src="assets/Trivance_Logo_Vector.png" alt="Trivance AI Logo" />
-      </a>
+      <a href="index.html"><img id="logoImage" src="assets/Trivance_Logo_Vector.png" alt="Trivance AI Logo" /></a>
     </div>
     <nav class="nav-links">
       <a href="index.html" class="active">Home</a>
@@ -475,53 +42,73 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero" role="banner" aria-labelledby="hero-heading">
     <h1 id="hero-heading" class="hero-title">AI Strategy That Works.</h1>
     <p class="quote">“Most teams don’t need another AI tool. They need a map.”</p>
     <p class="subtext">If you're going to advance — Trivance.</p>
-    <div class="cta-buttons" role="group" aria-label="Call to action buttons">
-      <a href="https://calendly.com/kyle-fonger-trivanceai/30min" class="button" aria-label="Book your free discovery call with Trivance AI">Book Your Free Discovery Call</a>
-      <a href="mailto:kyle.fonger@trivanceai.com" class="button secondary" aria-label="Send an email to Trivance AI">Send an Email</a>
+    <div class="cta-buttons">
+      <a href="https://calendly.com/kyle-fonger-trivanceai/30min" class="button">Book Your Free Discovery Call</a>
+      <a href="mailto:kyle.fonger@trivanceai.com" class="button secondary">Send an Email</a>
     </div>
   </section>
 
-  <!-- Framework Section -->
   <section class="framework" role="main" aria-labelledby="framework-heading">
     <h2 id="framework-heading">The Trivance Approach</h2>
-    <div class="steps" role="list" aria-label="Three-step Trivance approach">
-
-      <a href="services.html" class="step-link" aria-label="Learn more about our Clarity process">
-        <div class="step" role="listitem" aria-labelledby="step-1-heading">
-          <img src="assets/clarity-home-v3.png" alt="Clarity Illustration" style="max-width: 100%; height: auto; margin-bottom: 1.5rem;">
-          <h3 id="step-1-heading">1. Clarity</h3>
+    <div class="steps" role="list">
+      <div class="step-link" data-step="clarity" role="button" tabindex="0">
+        <div class="step">
+          <img src="assets/clarity-home-v3.png" alt="Clarity Illustration">
+          <h3>1. Clarity</h3>
           <p>We start with real conversation. Where’s the friction? What do you actually need?</p>
         </div>
-      </a>
-
-      <div class="step-link" data-step="strategy" role="button" tabindex="0" aria-label="Reveal details about our Strategy process">
-        <div class="step" role="listitem" aria-labelledby="step-2-heading">
-          <img src="assets/strategy-home-v3.png" alt="Strategy Illustration" style="max-width: 100%; height: auto; margin-bottom: 1.5rem;">
-          <h3 id="step-2-heading">2. Strategy</h3>
+      </div>
+      <div class="step-link" data-step="strategy" role="button" tabindex="0">
+        <div class="step">
+          <img src="assets/strategy-home-v3.png" alt="Strategy Illustration">
+          <h3>2. Strategy</h3>
           <p>You get a practical roadmap. Tools, timing, priorities — laid out for your team.</p>
         </div>
       </div>
-
-      <a href="services.html" class="step-link" aria-label="Learn more about our Execution, Training, and Advisory services">
-        <div class="step" role="listitem" aria-labelledby="step-3-heading">
-          <img src="assets/execution_training_advisory-home-v3.png" alt="Execution, Training, Advisory Illustration" style="max-width: 100%; height: auto; margin-bottom: 1.5rem;">
-          <h3 id="step-3-heading">3. Execution / Training / Advisory</h3>
+      <div class="step-link" data-step="execution" role="button" tabindex="0">
+        <div class="step">
+          <img src="assets/execution_training_advisory-home-v3.png" alt="Execution Illustration">
+          <h3>3. Execution / Training / Advisory</h3>
           <p>We can build it, train your team, or stay on as your AI advisor — it’s your call.</p>
         </div>
-      </a>
-
+      </div>
     </div>
+
+    <div id="step-details" class="step-details-container" aria-live="polite"></div>
   </section>
 
-
-  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Trivance AI &bullet; Founded by Kyle Fonger &bullet; <a href="contact.html">Contact</a></p>
   </footer>
+
+  <script>
+    const stepLinks = document.querySelectorAll('.step-link');
+    const detailContainer = document.getElementById('step-details');
+    const detailImages = {
+      clarity: 'assets/clarity-home-details.png',
+      strategy: 'assets/strategy-home-details.png',
+      execution: 'assets/execution_training_advisory-home-details.png'
+    };
+
+    stepLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const step = link.dataset.step;
+        if (!step || !detailImages[step]) return;
+
+        stepLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+
+        detailContainer.style.opacity = 0;
+        setTimeout(() => {
+          detailContainer.innerHTML = `<img src="${detailImages[step]}" alt="${step} details">`;
+          detailContainer.style.opacity = 1;
+        }, 250);
+      });
+    });
+  </script>
 </body>
 </html>
